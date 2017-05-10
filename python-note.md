@@ -37,11 +37,13 @@ str[1:3] # oc
 str[1:] # oclip
 str[-2:] # ip
 str[:-2] # nocl
+str[1:-1:2] # ol
+str[::-1] # pilcon
 ```
 - 基本操作
-    * `len()`
+    * `len()`、`count()`
     * `in`
-    * `max` `min`
+    * `max`、`min`
     * `cmp`
     * `+` `*`
     
@@ -84,4 +86,26 @@ codecs.open('filename', encoding='utf8')
 a = u"中文"
 
 # Python3
+```
+
+### 列
+- 操作与字符串一致
+- `append()` `insert()`
+- `extend()`
+- `pop([i])` `remove()`
+- `reverse()` `sort()`
+``` py
+li = [1,2]
+li.append(3) # [1,2,3]
+li[len(li):] = [4,5] # [1,2,3,4,5]
+li.extend('67') # [1, 2, 3, 4, 5, '6', '7']
+li.pop(2) # [1, 2, 4, 5, '6', '7']
+li.remove(5) # [1, 2, 4, '6', '7']
+```
+
+### tuple
+> Tuple与String一样，不可变，不可变，不可变
+``` py
+tp = (1,)
+tp = (1,2,3)
 ```
