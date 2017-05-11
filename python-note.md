@@ -8,7 +8,7 @@
 
 ## 数据类型
 > computer是“她”
-### 数
+### num
 - `id()` `type()`
 - round四舍五入
 - `dir(math)` `help(math)`
@@ -17,7 +17,7 @@ from __future__ import division
 10//3 # 3
 ```
 
-### 字
+### str
 - io
 ``` py
 a = raw_input('please input :')
@@ -88,7 +88,7 @@ a = u"中文"
 # Python3
 ```
 
-### 列
+### list
 - 操作与字符串一致
 - `append()` `insert()`
 - `extend()`
@@ -108,4 +108,29 @@ li.remove(5) # [1, 2, 4, '6', '7']
 ``` py
 tp = (1,)
 tp = (1,2,3)
+```
+
+### dict
+
+- 构建
+    * 字面量
+    * 属性值
+    * 键值对列表
+``` py
+obj = {}
+obj['a'] = 'xxx'
+obj = dict([['a',1],['b',2]])
+```
+- 常用
+    * len(d)，返回字典(d)中的键值对的数量
+    * d[key]，返回字典(d)中的键(key)的值
+    * d[key]=value，将值(value)赋给字典(d)中的键(key)
+    * del d[key]，删除字典(d)的键(key)项（将该键值对删除）
+    * key in d，检查字典(d)中是否含有键为key的项
+> HTML模板
+``` py
+temp = "<html><head><title>%(lang)s<title><body><p>My name is %(name)s.</p></body></head></html>"
+my = {"name":"noclip", "lang":"python"}
+temp % my
+'<html><head><title>python<title><body><p>My name is qiwsir.</p></body></head></html>'
 ```
