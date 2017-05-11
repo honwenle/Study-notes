@@ -134,3 +134,34 @@ my = {"name":"noclip", "lang":"python"}
 temp % my
 '<html><head><title>python<title><body><p>My name is qiwsir.</p></body></head></html>'
 ```
+
+- copy 修改
+
+### set
+- 创建
+    * `{[1,2,3]}`
+    * `set("123")` `set([1,2,3])`
+- 常用方法
+    * add()
+    * update()
+    * pop() 任意剔除一个
+    * remove() 指定剔除一个(不存的*会报错*)
+    * discard() 指定剔除一个(不存的*不会报错*)
+    * clear()
+- 不可变frozenset()
+- 运算
+    * in
+    * `set1 == set2` 、 `set1 != set2`
+    * 子集`issubset()`超集`issuperset()` 并集`union()` 交集`intersection()` 差集`difference()`
+``` py
+{1,2,3} > {1,2} # TRUE
+{1,2,3} > {1,4} # FALSE
+{1,2} < {1,2,3} # TRUE
+
+{1,2} | {2,3} # set([1, 2, 3])
+{1,2} & {2,3} # set([2])
+{1,2} and {2,3} # set([2])
+
+{1,2,3} - {1,2} # set([3])
+{1,2,3}.symmetric_difference({1,2,4}) # set([3, 4])
+```
