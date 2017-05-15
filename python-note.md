@@ -165,3 +165,62 @@ temp % my
 {1,2,3} - {1,2} # set([3])
 {1,2,3}.symmetric_difference({1,2,4}) # set([3, 4])
 ```
+
+## 语句、文件
+
+### 运算符
+- 算数
+- 比较
+- 逻辑(布尔)
+
+### 一般语句
+- `print`
+- `import`
+- `=`
+    * 多指 `a = 1,2`
+    * 交换 `a, b = b, a`
+    * 链式 `a = b = 1`
+    * 增量 `a += 1`
+### 条件语句
+- `if` `elif` `else`
+``` py
+age = 2
+if age > 18:
+    print '已成年'
+elif x > 0:
+    print '未成年'
+else:
+    print '未出生'
+```
+- 三元
+``` py
+'1' if True else '0' # '1'
+```
+### 循环语句
+- `for in`
+``` py
+for i in 'noclip':
+    print i
+```
+- `range`
+``` py
+range(2) # [0,1]
+range(1,3) # [1,2]
+range(0,5,2) # [0,2,4]
+range(0,-2,-1) # [0,-1]
+```
+- `zip`
+``` py
+zip([1,2],'abcd') # [(1, 'a'), (2, 'b')]
+zip([1,2]) # [(1,), (2,)]
+```
+- `enumerate`
+- 列表解析
+``` py
+[x**2 for x in range(5)] # [0, 1, 4, 9, 16]
+['pre:'+x for x in 'noclip'] # ['pre:n', 'pre:o', 'pre:c', 'pre:l', 'pre:i', 'pre:p']
+```
+
+- `while`
+> guess_number.py
+- `while ... else` `for ... else`
