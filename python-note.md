@@ -5,6 +5,14 @@
 - The Zen of Python `import this`
 - 2 or 3 ?
 - RECL or IDE ?
+### 自省
+- `help()`
+- `dir()`
+- `__doc__`
+- *文档*
+    * [官方网站](https://www.python.org/)
+    * [官方文档](https://docs.python.org/3/)
+    * [中文文档](http://docs.pythontab.com/)
 
 ## 数据类型
 > computer是“她”
@@ -251,3 +259,16 @@ with open("test.txt","a") as f:
 i = iter('noclip')
 i.next()
 ```
+
+## 函数
+
+## 类
+
+## 模块
+
+## 错误、异常
+
+## 应用
+### 数据
+### 网站
+### 计算
