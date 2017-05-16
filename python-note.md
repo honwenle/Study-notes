@@ -224,3 +224,30 @@ zip([1,2]) # [(1,), (2,)]
 - `while`
 > guess_number.py
 - `while ... else` `for ... else`
+
+### 文件
+- `open` `write` `close`
+- 模式
+    * r *以读方式打开文件，可读取文件信息。*
+    * w *以写方式打开文件，可向文件写入信息。如文件存在，则清空该文件，再写入新内容*
+    * a *以追加模式打开文件（即一打开文件，文件指针自动移到文件末尾），如果文件不存在则创建*
+    * r+ *以读写方式打开文件，可对文件进行读和写操作。*
+    * w+ *消除文件内容，然后以读写方式打开文件。*
+    * a+ *以读写方式打开文件，并把文件指针移到文件尾。*
+    * b *以二进制模式打开文件，而不是以文本模式。该模式只对Windows或Dos有效，类Unix的文件是用二进制模式进行操作的。*
+- `seek()` `tell()`
+``` py
+f = open('test.txt','a')
+f.write('some text')
+f.read()
+for line in f:
+    print line,
+f.close()
+with open("test.txt","a") as f:
+    print f.read()
+```
+### 迭代
+``` py
+i = iter('noclip')
+i.next()
+```
