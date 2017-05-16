@@ -261,6 +261,49 @@ i.next()
 ```
 
 ## 函数
+- 经典的A+B
+``` py
+def plus_a_b(a, b):
+    return a + b
+plus_a_b(1, 2) # 3
+```
+- 文档
+``` py
+def fbnq(n):
+    '''
+    This is my Fibonacci
+    '''
+    a,b = 1,1
+    for i in range(n):
+        a,b = b,a+b
+    return b
+fbnq.__doc__
+help(fbnq)
+```
+- 参数
+传入的可变变量在函数里修改是会修改原变量的
+``` py
+def foo(p1, p2, p3 = 3):
+    print p1
+    print p2
+    print p3
+foo(1,2,4)
+foo(p1 = 1, p2 = 2, p3 = 4)
+# *args **args
+```
+- 变量
+    * 全局
+    * 局部
+- 命名空间
+``` py
+x = 1
+print vars()
+def a():
+    x = 2
+    print vars()
+a()
+print vars()
+```
 
 ## 类
 
