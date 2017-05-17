@@ -261,6 +261,7 @@ i.next()
 ```
 
 ## 函数
+### 基本
 - 经典的A+B
 ``` py
 def plus_a_b(a, b):
@@ -280,7 +281,16 @@ def fbnq(n):
 fbnq.__doc__
 help(fbnq)
 ```
-- 参数
+- 接受参数
+    * 普通参数 `def foo(arg):`
+    * 带默认值参数 `def foo(arg=1):`
+    * 普通收集 `def foo(*arg):`
+    * 键值收集 `def foo(**arg):`
+- 传递参数
+    * 顺序 `foo(1)`
+    * 指定 `foo()` `foo(2)` `foo(arg=2)`
+    * 元组解构 `foo(*arg)`
+    * 字典解构 `foo(**arg)`
 传入的可变变量在函数里修改是会修改原变量的
 ``` py
 def foo(p1, p2, p3 = 3):
@@ -289,7 +299,14 @@ def foo(p1, p2, p3 = 3):
     print p3
 foo(1,2,4)
 foo(p1 = 1, p2 = 2, p3 = 4)
+foo(*(1,2,3))
+foo(**{'p1':1,'p2':2,'p3':3})
 # *args **args
+def foos(a, b = 2, *c, **d):
+    print a
+    print b
+    print c
+    print d
 ```
 - 变量
     * 全局
@@ -304,6 +321,12 @@ def a():
 a()
 print vars()
 ```
+
+### 典型函数
+- lambda
+- map
+- reduce
+- filter
 
 ## 类
 
