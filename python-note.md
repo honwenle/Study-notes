@@ -324,9 +324,25 @@ print vars()
 
 ### 典型函数
 - lambda
+``` py
+(lambda x: x**2)(3) # 9
+```
 - map
+``` py
+map(lambda x: x**2, range(5)) # [0, 1, 4, 9, 16]
+map(lambda x: x*2, 'abc') # ['aa', 'bb', 'cc']
+```
 - reduce
+``` py
+# if py3
+# from functools import reduce
+reduce(lambda x,y: x*y, range(1,5)) # 24
+```
 - filter
+``` py
+filter(lambda x: x > 0, range(-5,5)) # [1, 2, 3, 4]
+filter(lambda c: c!='i', 'noclip') # 'noclp'
+```
 
 ## 类
 
