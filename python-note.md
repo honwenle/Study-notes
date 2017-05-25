@@ -345,6 +345,7 @@ filter(lambda c: c!='i', 'noclip') # 'noclp'
 ```
 
 ## 类
+- 创建、self
 ``` py
 class A(object):
     'this is class descript'
@@ -360,6 +361,38 @@ print a.name
 print a.getName()
 a.age(13)
 ```
+- 变量、命名空间、作用域
+``` py
+class A(object):
+    x = 1
+a = A()
+print A.x # 1
+print a.x # 1
+a.x += 1
+print a.x # 2
+print A.x # 1
+del a.x
+print a.x # 1
+A.x += 1
+print a.x # 2
+print A.x # 2
+
+class B(object):
+    y = [1,2]
+b = B()
+print b.y # [1,2]
+print B.y # [1,2]
+b.y.append(3)
+print b.y # [1,2,3]
+print B.y # [1,2,3]
+B.y.append(4)
+print b.y # [1,2,3,4]
+print B.y # [1,2,3,4]
+```
+- 继承
+    * 普通继承、多级继承
+    * 多重继承(广度优先)
+    * spuer
 
 ## 模块
 
